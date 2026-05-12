@@ -98,4 +98,15 @@ public class BinarySearchTree<T extends Comparable<T>>{
                 ? null
                 : successor.value;
     }
+
+    public boolean delete(T value){
+        Node<T> node = find(value, root);
+        if(node == null) return false;
+        delete(node);
+        return true;
+    }
+
+    private void delete(Node<T> node){
+        
+    }
 }
